@@ -1,36 +1,22 @@
 'use strict';
 
-if (0) {
-    console.log('Ok!');
-} else {
-    console.log('Error!');
-}
+let num = 50;
 
-
-
-// if (num < 49) {
-//     console.log('Error');
-// } else if (num > 100) {
-//     console.log('Too many!');
-// } else {
+// while (num <= 55) {
 //     console.log(num);
+//     num++;
 // }
 
-// (num == 50) ? console.log('Ok') : console.log('Error');
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num < 55);
 
-
-const num = '50';
-switch (num) {
-   case 49:
-       console.log('Noo');
-       break;
-    case '51':
-        console.log('Noo');
-        break;
-    case 50:
-        console.log('Yeeah!');
-        break;
-    default:
-        console.log('Sorry:(');
-        break;
+for (let i = 1; i < 10; i++) {
+    if (i === 6) {
+        // break;
+        continue;
+    }
+    console.log(i);
 }
