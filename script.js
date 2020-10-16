@@ -1,37 +1,27 @@
 'use strict';
 
-let num = 20;
+const str = 'test';
+const arr = [1, 2, 4];
 
-function showFirstMessage(text) {
-    console.log(text);
-    console.log(num);
-}
+// console.log(str.toUpperCase());
+console.log(str.toLocaleLowerCase());
+console.log(str);
 
-showFirstMessage('Mustafa top of the top');
-console.log(num);
+const fruit = 'Some fruit';
 
-// function calc(a, b) {
-//     return (a + b);
-// }
+console.log(fruit.indexOf('q'));
 
-// console.log(calc(34343, 343434));
-// console.log(calc(33, 34));
-// console.log(calc(-33, 34));
+const log = 'Hello World!';
 
-function ret() {
-    let num = 50;
-    return num;
-}
+// console.log(log.slice(5));
 
-const anotherNum = ret();
-console.log(anotherNum);
+// console.log(log.substring(6, 11));
 
-let logger = function () {
-    console.log('Hi!');
-};
+console.log(log.substr(6, 5));
 
-logger();
+const num = 12.5;
+console.log(Math.round(num));
 
-const calc = (a, b) => {
-  return a + b; 
-};
+const test = '12.2px';
+console.log(parseInt(test));
+console.log(parseFloat(test));
