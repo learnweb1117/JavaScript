@@ -92,3 +92,4 @@ const q = {
     two: 2
 };
 const newObj = {...q};
+// changed
