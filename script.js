@@ -1,36 +1,95 @@
 'use strict';
 
-const arr = [1, 12, 63, 5, 23];
-arr.sort(compareNum);
-console.log(arr);
+// let a = 5,
+//     b = a;
+    
+// b = b + 5;
 
-function compareNum(a, b) {
-    return a - b;
+// console.log(b);
+// console.log(a);
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj; //Ссылку
+
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+function copy(mainObj) {
+    let objCopy = {};
+    
+    let key;
+    for (key in mainObj) {
+        objCopy[key] = mainObj[key];
+    }
+    
+    return objCopy;
 }
 
-// arr[99] = 0;
-// console.log(arr.length);
-// console.log(arr);
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
 
-arr.forEach(function (item, i, arr) {
-    console.log(`${i}: ${item} внутри массива ${arr}`);
-});
+const newNumbers = copy(numbers);
 
-// arr.pop();
-// arr.push(10);
+newNumbers.a = 10;
+newNumbers.c.x = 10;
 
-// console.log(arr);
+console.log(newNumbers);
+console.log(numbers);
 
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
+const add = {
+  d: 17,
+  e: 20  
+};
+
+const cloner = Object.assign({}, add);
+
+cloner.d = 20;
+
+// console.log(add);
+// console.log(cloner);
+
+const oldArr = ['a', 'b', 'c'];
+const newArr = oldArr.slice();
+
+newArr[1] = 'asdsdfsdf';
+console.log(newArr);
+console.log(oldArr);
+
+const video = ['youtube', 'vimeo', 'rutube'],
+      blogs = ['wordpress', 'livejournal', 'blogger'],
+      internet = [...video, ...blogs, 'vk', 'facebook'];
+      
+console.log(internet);
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
 
-for (const value of arr) {
-    console.log(value);
-}
+const num = [2, 5, 7];
 
-// const str = prompt('', '');
-// const products = str.split(', ');
-// products.sort();
-// console.log(products.join('; '));
-// added;
+log(...num);
+
+const array = ['a', 'b'];
+
+const newArray = [...array];
+
+const q = {
+    one: 1,
+    two: 2
+};
+const newObj = {...q};
+// changed
