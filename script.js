@@ -1,52 +1,26 @@
-'use strict';
+// 'use strict';
 
-// To string
+// •	Какое будет выведено значение: let x = 5; alert( x++ ); ? 5
 
-// 1)
-console.log(typeof(String(null)));
-console.log(typeof(String(1)));
+// •	Чему равно такое выражение: [ ] + false - null + true ? [] == '' => [] + false = 'false' - null = NaN + true = NaN
 
-// 2)
-console.log(typeof(null + ''));
+// •	Что выведет этот код: let y = 1; let x = y = 2; alert(x); ? 2 примитивы передаются справа на лево
 
-const num = 5;
+// •	Чему равна сумма [ ] + 1 + 2? '12'
 
-console.log('https://vk.com/catalog/' + num);
+// •	Что выведет этот код: alert( "1"[0] )? '1'
 
-const fontSize = 26 + 'px';
+// •	Чему равно 2 && 1 && null && 0 && undefined ? null && - запинается на лжи
 
-// To number
+// •	Есть ли разница между выражениями? !!( a && b ) и (a && b)? Yes boolean !== a or b
 
-// 1)
-console.log(typeof(Number('4')));
+// •	Что выведет этот код: alert( null || 2 && 3 || 4 ); ? 3 && приоритет больше чем у ||
 
-// 2)
-console.log(typeof(+'3'));
+// •	a = [1, 2, 3]; b = [1, 2, 3]; Правда ли что a == b ? No, они различаются - это 2 разных, но идентичных хранилища
 
-// 3)
-console.log(typeof(parseInt('15px', 10)));
+// •	Что выведет этот код: alert( +"Infinity" ); ? int - infinity
 
-let answer = +prompt('Hello', '');
+// •	Верно ли сравнение: "Ёжик" > "яблоко"? False, я > Ё
 
-// To boolean
+// •	Чему равно 0 || "" || 2 || undefined || true || falsе ? 2
 
-// 0, '', null, undefined, Nan === FALSE
-
-// 1)
-let switcher = null;
-
-if (switcher) { // Условие не выполняется
-    console.log('Working...');
-}
-
-switcher = 1;
-
-if (switcher) { // Условие выполняется
-    console.log('Working...');
-}
-
-// 2)
-console.log(typeof(Boolean('4')));
-
-// 3)
-console.log(typeof(!!'4'));
