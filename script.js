@@ -1,26 +1,34 @@
-// 'use strict';
+'use strict';
 
-// •	Какое будет выведено значение: let x = 5; alert( x++ ); ? 5
+const btns = document.querySelectorAll('button'),
+      overlay = document.querySelector('.overlay');
 
-// •	Чему равно такое выражение: [ ] + false - null + true ? [] == '' => [] + false = 'false' - null = NaN + true = NaN
+// btn.onclick = function () {
+//     alert('Clicked');
+// };
+let i = 0;
+const deleter = (e) => {
+    console.log(e.currentTarget);
+    console.log(e.type);
+    // i++;
+    // if (i == 1) {
+    //     btn.removeEventListener('click', deleter);
+    // }
+    // console.log('hover');
+    // e.target.remove();
+};
 
-// •	Что выведет этот код: let y = 1; let x = y = 2; alert(x); ? 2 примитивы передаются справа на лево
+// btn.addEventListener('click', deleter);
+// overlay.addEventListener('click', deleter);
 
-// •	Чему равна сумма [ ] + 1 + 2? '12'
+btns.forEach(btn => {
+    btn.addEventListener('click', deleter, {once: true});
+});
 
-// •	Что выведет этот код: alert( "1"[0] )? '1'
+const link = document.querySelector('a');
 
-// •	Чему равно 2 && 1 && null && 0 && undefined ? null && - запинается на лжи
-
-// •	Есть ли разница между выражениями? !!( a && b ) и (a && b)? Yes boolean !== a or b
-
-// •	Что выведет этот код: alert( null || 2 && 3 || 4 ); ? 3 && приоритет больше чем у ||
-
-// •	a = [1, 2, 3]; b = [1, 2, 3]; Правда ли что a == b ? No, они различаются - это 2 разных, но идентичных хранилища
-
-// •	Что выведет этот код: alert( +"Infinity" ); ? int - infinity
-
-// •	Верно ли сравнение: "Ёжик" > "яблоко"? False, я > Ё
-
-// •	Чему равно 0 || "" || 2 || undefined || true || falsе ? 2
-
+link.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    console.log(e.target);
+});
