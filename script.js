@@ -1,34 +1,35 @@
 'use strict';
 
-const btns = document.querySelectorAll('button'),
-      overlay = document.querySelector('.overlay');
+// touchstart
+// touchmove
+// touchend
+// touchenter
+// touchleave
+// touchcancel
 
-// btn.onclick = function () {
-//     alert('Clicked');
-// };
-let i = 0;
-const deleter = (e) => {
-    console.log(e.currentTarget);
-    console.log(e.type);
-    // i++;
-    // if (i == 1) {
-    //     btn.removeEventListener('click', deleter);
-    // }
-    // console.log('hover');
-    // e.target.remove();
-};
-
-// btn.addEventListener('click', deleter);
-// overlay.addEventListener('click', deleter);
-
-btns.forEach(btn => {
-    btn.addEventListener('click', deleter, {once: true});
-});
-
-const link = document.querySelector('a');
-
-link.addEventListener('click', (e) => {
+window.addEventListener('DOMContentLoaded', () => {
+   const box = document.querySelector('.box');
+   
+   box.addEventListener('touchstart', (e) => {
+       e.preventDefault();
+       
+       console.log('Start');
+       console.log(e.changedTouches);
+   });
+   
+   box.addEventListener('touchmove', (e) => {
     e.preventDefault();
     
-    console.log(e.target);
+    console.log(e.targetTouches[0].pageX);
 });
+   box.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    
+    console.log('End');
+});
+
+});
+
+// touches
+// targetTouches
+// changedTouches
