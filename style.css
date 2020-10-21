@@ -1,0 +1,15 @@
+#first {
+    background: gray;
+    padding: 30px 10px;
+}
+button {
+    width: 100px;
+    height: 60px;
+    background: yellow;
+}
+.blue {
+    background: blue;
+}
+.red {
+    background: red;
+}
